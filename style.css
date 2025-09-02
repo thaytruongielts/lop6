@@ -1,0 +1,189 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-bottom: 2px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1em;
+    color: #7f8c8d;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    color: #34495e;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+/* --- Drag and Drop Section --- */
+.drag-drop-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sentence-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.2em;
+}
+
+.drop-zone {
+    border: 2px dashed #007bff;
+    border-radius: 4px;
+    width: 120px;
+    height: 30px;
+    background-color: #e8f4fd;
+    text-align: center;
+    line-height: 30px;
+    transition: all 0.2s ease;
+}
+
+.drop-zone.hovered {
+    background-color: #cce5ff;
+    border-color: #0056b3;
+}
+
+.word-bank {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.draggable-word {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50px;
+    cursor: grab;
+    transition: transform 0.2s ease;
+}
+
+.draggable-word:active {
+    cursor: grabbing;
+}
+
+/* --- Mystery Box Section --- */
+.mystery-box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.mystery-box {
+    width: 200px;
+    height: 100px;
+    background-color: #34495e;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.mystery-box:hover {
+    background-color: #49607a;
+}
+
+.mystery-box.uncovered {
+    background-color: #28a745;
+}
+
+#mysteryWord {
+    display: none;
+    font-size: 2em;
+    color: #007bff;
+    margin: 10px 0;
+}
+
+.sentence-input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1em;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    min-height: 100px;
+    resize: vertical;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+/* --- General Controls --- */
+.control-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#shuffleButton {
+    padding: 15px 30px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#shuffleButton:hover {
+    background-color: #218838;
+}
+
+#shuffleButton:active {
+    transform: translateY(2px);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+    color: #7f8c8d;
+}
